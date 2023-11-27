@@ -27,12 +27,14 @@ console.log('il numero generato randomicamente dalla console è:', consoleNumero
 
 function numeriSum (numero1, numero2) {
     let sommaNumeri = (numero1 + numero2);
-    return console.log("la somma dei numeri è", sommaNumeri);
+    return sommaNumeri;
 }
+
 
 
 //somma tra i due numeri
 const numeriSommati = numeriSum (numeroUser, consoleNumero);
+console.log("la somma dei numeri è", numeriSommati);
 
 if(numeriSommati % 2 === 0) {
     console.log('il numero e pari');  
