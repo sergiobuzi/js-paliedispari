@@ -27,7 +27,7 @@ console.log('il numero generato randomicamente dalla console è:', consoleNumero
 
 function numeriSum (numero1, numero2) {
     let sommaNumeri = (numero1 + numero2);
-    console.log("la somma dei numeri è", sommaNumeri);
+    return console.log("la somma dei numeri è", sommaNumeri);
 }
 
 
@@ -35,7 +35,10 @@ function numeriSum (numero1, numero2) {
 const numeriSommati = numeriSum (numeroUser, consoleNumero);
 
 if(numeriSommati % 2 === 0) {
-    return console.log("il numero e pari");
+    console.log('il numero e pari');  
 } else {
-    return console.log("il numero e dispari");
+    console.log('il nuemero e dispari');
 }
+
+
+//creo una condizione che mi dichiari il vincitore
