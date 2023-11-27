@@ -6,17 +6,30 @@
 
 
 //chiedo all'user di inserire un numero e di scegliere tra pari e dispari
-const numeroUser = prompt('inserisci un numero da 1 a 5');
+const numeroUser = parseInt(prompt('inserisci un numero da 1 a 5'));
 const sceltaUser = prompt('scegli tra pari e dispari');
 
 
 //creo una funzione che mi generi un numero randomico
-function numRandom() {
-    const randomNum = Math.floor(Math.random() * 5) + 1;
+function numRandom(min, max) {
+    const randomNum = Math.floor(Math.random() * max) + min;
     return randomNum;
 }
 
 
 //creo una variabile che mi prenda il numero uscito dalla funzione e lo stampi
-let consoleNumero = numRandom();
+let consoleNumero = numRandom(1, 5);
 console.log('il numero generato randomicamente dalla console è:', consoleNumero);
+
+
+
+//creo una funzione che mi faccia la somma del numero inserito e quello generato randomicamente
+
+function numeriSum (numero1, numero2) {
+    let sommaNumeri = (numero1 + numero2);
+    console.log("la somma dei numeri è", sommaNumeri);
+}
+
+
+//somma tra i due numeri
+const numeriSommati = numeriSum (numeroUser, consoleNumero);
