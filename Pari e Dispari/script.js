@@ -5,9 +5,13 @@
 
 
 
-//chiedo all'user di inserire un numero e di scegliere tra pari e dispari
+//chiedo all'user di inserire un numero e di scegliere tra pari e dispari e li stampo
 const numeroUser = parseInt(prompt('inserisci un numero da 1 a 5'));
 const sceltaUser = prompt('scegli tra pari e dispari');
+console.log('hai scelto', numeroUser);
+console.log('hai scelto', sceltaUser);
+
+
 
 
 //creo una funzione che mi generi un numero randomico
@@ -20,6 +24,7 @@ function numRandom(min, max) {
 //creo una variabile che mi prenda il numero uscito dalla funzione e lo stampi
 let consoleNumero = numRandom(1, 5);
 console.log('il numero generato randomicamente dalla console è:', consoleNumero);
+
 
 
 
@@ -36,11 +41,19 @@ function numeriSum (numero1, numero2) {
 const numeriSommati = numeriSum (numeroUser, consoleNumero);
 console.log("la somma dei numeri è", numeriSommati);
 
-if(numeriSommati % 2 === 0) {
-    console.log('il numero e pari');  
-} else {
-    console.log('il nuemero e dispari');
-}
-
 
 //creo una condizione che mi dichiari il vincitore
+if(numeriSommati % 2 === 0) {
+    if(sceltaUser === "pari"){
+        console.log("hai vinto, il numero è pari!");
+} else {
+    console.log('hai perso, il numero è pari!');
+    }
+
+} else{
+    if(sceltaUser === "dispari"){
+        console.log("hai vinto, il numero è dispari!");
+    } else{
+        console.log("hai perso, il numero è dispari!");
+    }
+}
