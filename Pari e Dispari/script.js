@@ -33,3 +33,9 @@ function numeriSum (numero1, numero2) {
 
 //somma tra i due numeri
 const numeriSommati = numeriSum (numeroUser, consoleNumero);
+
+if(numeriSommati % 2 === 0) {
+    return console.log("il numero e pari");
+} else {
+    return console.log("il numero e dispari");
+}
